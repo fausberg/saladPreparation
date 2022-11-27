@@ -1,4 +1,6 @@
-package saladPreparation.Salad;
+package saladPreparation.salad.vegetables;
+
+import saladPreparation.salad.Vegetables;
 
 public class Cucumber extends Vegetables {
 
