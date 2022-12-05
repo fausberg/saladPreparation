@@ -29,27 +29,21 @@ public class Main {
         vegetables.add(new Onion());
         vegetables.add(new Onion());
 
-        for(Vegetables vegetable :vegetables) {
-                System.out.println(vegetable);
+        for (Vegetables vegetable : vegetables) {
+            vegetable.info();
         }
 
         System.out.println();
 
-        int allCalories = 0;
-
-        for(Vegetables vegetable :vegetables) {
-                allCalories = vegetable.getAllCalories();
-        }
-
-        System.out.println("Общая калорийность : " + allCalories);
+        System.out.println("Общая калорийность : " + Vegetables.getAllCalories());
 
         System.out.println();
 
         vegetables.sort(Vegetables::compareTo);
 
 
-        for(Vegetables vegetable : vegetables) {
-            System.out.println(vegetable);
+        for (Vegetables vegetable : vegetables) {
+            vegetable.info();
         }
 
         System.out.println();

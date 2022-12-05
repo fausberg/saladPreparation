@@ -5,17 +5,7 @@ import saladPreparation.salad.Vegetables;
 public class Cucumber extends Vegetables {
 
     public Cucumber() {
-        super(10, "Green");
-    }
-
-    @Override
-    public int getCalories() {
-        return super.getCalories();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
+        super(10, "Green", "Огурец");
     }
 
     @Override
@@ -24,5 +14,12 @@ public class Cucumber extends Vegetables {
                 "calories=" + calories +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    public void info() {
+        System.out.println("Это " + super.vegetableName);
+        System.out.println("Такие огурцы только у нас");
+        System.out.println("Цвет : " + super.color);
+        System.out.println("Калории : " + super.getCalories());
     }
 }

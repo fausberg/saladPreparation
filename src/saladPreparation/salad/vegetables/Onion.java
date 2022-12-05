@@ -5,17 +5,7 @@ import saladPreparation.salad.Vegetables;
 public class Onion extends Vegetables {
 
     public Onion() {
-        super(5, "White");
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public int getCalories() {
-        return super.getCalories();
+        super(5, "White", "Лук");
     }
 
     @Override
@@ -24,5 +14,12 @@ public class Onion extends Vegetables {
                 "calories=" + calories +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    public void info() {
+        System.out.println("Это " + super.vegetableName);
+        System.out.println("Самый вкусный лук что у наст есть");
+        System.out.println("Цвет : " + super.color);
+        System.out.println("Калории : " + super.getCalories());
     }
 }

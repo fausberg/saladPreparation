@@ -1,18 +1,22 @@
 package saladPreparation.salad;
 
 
-public class Vegetables implements Comparable<Vegetables> {
+public abstract class Vegetables implements Comparable<Vegetables> {
     protected int calories;
     protected String color;
+
+    protected String vegetableName;
 
     private static int allCalories = 0;
 
     public Vegetables() {
     }
 
-    public Vegetables(int calories, String color) {
+    public Vegetables(int calories, String color, String vegetableName) {
         this.calories = calories;
         this.color = color;
+        this.vegetableName = vegetableName;
+        allCalories += calories;
     }
 
     public int getCalories() {
@@ -23,8 +27,11 @@ public class Vegetables implements Comparable<Vegetables> {
         return color;
     }
 
-    public int getAllCalories() {
-        allCalories += calories;
+    public String getVegetableName() {
+        return vegetableName;
+    }
+
+    public static int getAllCalories() {
         return allCalories;
     }
 
@@ -35,6 +42,8 @@ public class Vegetables implements Comparable<Vegetables> {
                 ", color='" + color + '\'' +
                 '}';
     }
+
+    public abstract void info();
 
     @Override
     public int compareTo(Vegetables o) {
